@@ -1,8 +1,8 @@
 'use strict';
 const assert = require('assert').strict;
-const binarySearch = require('./binarySearch');
+const binarySearch = require('../binarySearch');
 
-(function binarySearchTests() {
+module.exports = function binarySearchTests() {
     console.log('Binary Search tests');
 
     const emptyArrayIndex = binarySearch([], 5);
@@ -16,4 +16,4 @@ const binarySearch = require('./binarySearch');
 
     index = binarySearch([1,2,3,4,5], 5);
     assert.strictEqual(index, 4, "Index should be 4");
-})()
+};
